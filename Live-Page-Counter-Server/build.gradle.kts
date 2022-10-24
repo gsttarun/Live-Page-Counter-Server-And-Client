@@ -22,6 +22,7 @@ repositories {
 }
 
 dependencies {
+    implementation(project(":CommonKonstants"))
     implementation("io.ktor:ktor-server-content-negotiation-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-core-jvm:$ktor_version")
     implementation("io.ktor:ktor-serialization-gson-jvm:$ktor_version")
@@ -31,3 +32,5 @@ dependencies {
     testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 }
+
+tasks.register("prepareKotlinBuildScriptModel"){}
